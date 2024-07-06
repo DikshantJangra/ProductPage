@@ -75,6 +75,10 @@ body {
   .slider-wrapper .swiper-slide-button {
     display: none;
   }
+  .product-img{
+    margin-top: -10vh;
+    margin-bottom: 7vh;
+  }
   .product-name, .product-mrp{
     align-self: center;
   }
