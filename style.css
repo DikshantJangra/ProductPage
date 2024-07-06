@@ -11,11 +11,12 @@ body {
 }
 .container{
     display: flex;
-    justify-content: center;        padding: 8vh 1vw 0vh 30vw;
+    justify-content: center;        
+    padding: 0vh 1vw 0vh 30vw;
 }
 .slider-wrapper {
   max-width: 1200px;
-  margin: 20vh 70px 55px;
+  margin: 15vh 70px 55px 70px;
 }
 .card-list .product{
     background: rgba(128, 128, 128, 0.144);
@@ -67,6 +68,115 @@ body {
 .product-mrp{
     padding-top: 15px;
 }
+
+.footer-container{
+  background: #000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  min-height: 37.5vh;
+}
+footer{
+  position: relative;
+  background: #fff;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .social-media, .menu{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
+}
+footer .social-media li, .menu li{
+  list-style: none;
+}
+ion-icon {
+  color: #000;
+}
+footer .social-media li a{
+  font-size: 2vw;
+  color: #000;
+  display: inline-block;
+  transition: 0.5s;
+  margin: 0px 10px;
+}
+footer .social-media li a:hover{
+  transform: translateY(-10px);
+}
+footer .menu li a{
+  font-size: 1.2vw;
+  color: #000;
+  display: inline-block;
+  opacity: 0.75;
+  margin: 0px 10px;
+  text-decoration: none;
+}
+footer .menu li a:hover{
+  opacity: 1;
+}
+footer p{
+  font-size: 0.9vw;
+  color: #000;
+  font-weight: 800;
+  margin: 20px 0px;
+}
+
+footer .wave{
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: #000 url(./Assets/wave.png);
+  background-size: 1000px 100px;
+}
+footer .wave#wave1{
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: wave1 4s linear infinite;
+}
+footer .wave#wave2{
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: wave2 4s linear infinite;
+}
+footer .wave#wave3{
+  z-index: 999;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: wave1 3s linear infinite;
+}
+footer .wave#wave4{
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: wave2 3s linear infinite;
+}
+@keyframes wave1{
+  0%{
+    background-position-x: 1000px;
+  }
+  100%{
+    background-position-x: 0px;
+  }
+}
+@keyframes wave2{
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: 1000px;
+  }
+}
 @media (max-width: 768px) {
   .slider-wrapper {
     margin: 15vh 10px 40px;
@@ -81,5 +191,17 @@ body {
   }
   .product-name, .product-mrp{
     align-self: center;
+  }
+  .footer-container{
+    min-height: 40.5vh;
+  }
+  footer .social-media li a{
+    font-size: 3vh;
+  }
+  footer .menu li a{
+    font-size: 2vh;
+  }
+  footer p{
+    font-size: 1vh;
   }
 }
