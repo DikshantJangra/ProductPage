@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Slab", serif;
+  color: white;
+}
+body {
+  background: #000;
+}
+.container{
+    display: flex;
+    justify-content: center;        padding: 8vh 1vw 0vh 30vw;
+}
+.slider-wrapper {
+  max-width: 1200px;
+  margin: 20vh 70px 55px;
+}
+.card-list .product{
+    background: rgba(128, 128, 128, 0.144);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 5vw;
+    height: 40vh;
+    border: 2px solid rgba(255, 255, 255, 0.363);
+}
+.container .slider-wrapper .card-list .product:hover{
+    box-shadow: 0px 4px 50px 0px rgba(255, 255, 255, 0.623);
+    scale: 1.05;
+    background: #000;
+    transition: ease-in 0.3s;
+}
+.slider-wrapper .swiper-pagination-bullet {
+  background: #fff;
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+}
+.slider-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.slider-wrapper .swiper-slide-button {
+  color: #fff;
+  margin-top: 50px;
+  transition: 0.2s ease;
+}
+.slider-wrapper .swiper-slide-button:hover {
+  color: #4658ff;
+}
+.product-img{
+    height: 250px;
+    width: auto;
+    margin-top: -5vw;
+    margin-bottom: 1vw;
+}
+.product-name, .product-mrp{
+    height: 2vh;
+    width: fit-content;
+    color: white;
+    align-self: flex-start;
+    padding-left: 1.2vw;
+}
+.product-mrp{
+    padding-top: 15px;
+}
+@media (max-width: 768px) {
+  .slider-wrapper {
+    margin: 15vh 10px 40px;
+    max-width: 70vw;
+  }
+  .slider-wrapper .swiper-slide-button {
+    display: none;
+  }
+  .product-name, .product-mrp{
+    align-self: center;
+  }
+}
